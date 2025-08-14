@@ -35,7 +35,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.OSS_TEST_ROLE_ARN }}
           role-duration-seconds: 14400 # 4 hours
-          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          aws-region: us-west-2
       - name: Run soak tests
         run: |
           RUN_CNI_INTEGRATION_TESTS=false RUN_UBUNTU_TEST=true ./scripts/run-integration-tests.sh
